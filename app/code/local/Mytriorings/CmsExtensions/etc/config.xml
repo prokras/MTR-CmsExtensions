@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <modules>
+        <Mytriorings_CmsExtensions>
+            <version>0.1.0</version>
+        </Mytriorings_CmsExtensions>
+    </modules>
+    <global>
+        <blocks>
+            <cmsextensions>
+                <class>Mytriorings_CmsExtensions_Block</class>
+            </cmsextensions>
+        </blocks>
+        <models>
+            <cmsextensions>
+                <class>Mytriorings_CmsExtensions_Model</class>
+            </cmsextensions>
+        </models>
+    </global>
+</config>

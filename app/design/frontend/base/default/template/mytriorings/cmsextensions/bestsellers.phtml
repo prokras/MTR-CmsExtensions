@@ -1,0 +1,29 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: R2K
+ * Date: 2017-07-29
+ * Time: 18:50
+ */
+
+$categoryId = $this->getCategoryId();
+$categoryId = 18; // debug only remove it
+$bestsellers = $this->getBestsellers($categoryId);
+$category = Mage::getModel('catalog/category')->load($categoryId);
+foreach ($bestsellers as $bestseller):
+?>
+<h2>Category <?php echo $category->getName();  ?></h2>
+<div>
+    <?php
+    echo $bestseller->getName();
+    echo $bestseller->getPrice();
+    echo $bestseller->getProductUrl();
+    echo $this->helper('catalog/image')->init($bestseller, 'small_image')->resize(122, 109);
+    print_r($bestseller->getCategoryIds());
+    ?>
+</div>
+<?php
+endforeach;
+echo "<pre>";
+//var_dump($bestsellers);
+echo "</pre>";
